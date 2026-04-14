@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ysmael Kamgaing | Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #ffffff;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: underline;
+      color: #0000EE;
+    }
+
+    a:hover {
+      color: #551A8B;
+      cursor: pointer;
+    }
+
+    .container {
+      width: 78%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #000;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+      font-size: 1.1rem;
+    }
+
+    .clock {
+      font-size: 1.1rem;
+      min-width: 85px;
+      text-align: right;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 0 30px;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 24px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 26px;
+      border: 1px solid #111;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 3px;
+      transition: 0.2s ease;
+      display: inline-block;
+    }
+
+    .btn.primary {
+      background: #000;
+      color: #fff;
+    }
+
+    .btn.secondary {
+      background: #fff;
+      color: #111;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.95;
+    }
+
+    section {
+      padding: 20px 0 10px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.3rem;
+      margin: 14px 0 18px;
+      padding-bottom: 8px;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #bbb;
+    }
+
+    .about-wrap {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      margin-top: 10px;
+    }
+
+    .profile-pic {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #888;
+      flex-shrink: 0;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-text p {
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+    }
+
+    .skills-title {
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin: 10px 0;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-pill {
+      border: 1px solid #b5b5b5;
+      background: #ededed;
+      padding: 8px 14px;
+      font-size: 1.05rem;
+    }
+
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .experience-card {
+      background: #f2f2f2;
+      border: 1px solid #000;
+      padding: 18px 16px;
+    }
+
+    .experience-card h3 {
+      font-size: 1.9rem;
+      margin-bottom: 4px;
+    }
+
+    .experience-card .date {
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+
+    .experience-card .role {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .experience-card .location {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+
+    .experience-card ul {
+      padding-left: 24px;
+      font-size: 1.15rem;
+    }
+
+    .experience-card li {
+      margin-bottom: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0 40px;
+      font-size: 1rem;
+      color: #444;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        width: 90%;
+      }
+
+      .navbar {
+        flex-direction: column;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .about-wrap {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .skills {
+        justify-content: center;
+      }
+
+      .clock {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <div class="logo">Ysmael Kamgaing</div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="clock" id="clock">00:00:00</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Hello, I'm Ysmael Kamgaing</h1>
+      <p>Software Engineer | Business Analyst | AI & Data Projects | Open to Opportunities</p>
+      <div class="hero-buttons">
+        <a href="#about" class="btn primary">Learn More</a>
+        <a href="resume.pdf" class="btn secondary" download>Download Resume</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-wrap">
+        <img
+          class="profile-pic"
+          src="profile.png"
+          alt="Profile photo"
+        />
+        <div class="about-text">
+          <p>
+            I'm a software engineer and business analyst with experience building data-driven solutions, automating reporting workflows, and improving digital product performance. My background spans software development, analytics, cloud tools, and AI-focused side projects.
+          </p>
+
+          <div class="skills-title">Skills &amp; Technologies</div>
+          <div class="skills">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">C/C++</span>
+            <span class="skill-pill">React.js</span>
+            <span class="skill-pill">Node.js</span>
+            <span class="skill-pill">HTML</span>
+            <span class="skill-pill">Pandas</span>
+            <span class="skill-pill">AWS</span>
+            <span class="skill-pill">QuickSight</span>
+            <span class="skill-pill">Firebase</span>
+            <span class="skill-pill">Tableau</span>
+            <span class="skill-pill">Google Ads</span>
+            <span class="skill-pill">Qdrant</span>
+            <span class="skill-pill">Linux</span>
+            <span class="skill-pill">Git/GitHub</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2 class="section-title">Work Experience</h2>
+      <div class="experience-list">
+        <article class="experience-card">
+          <h3><a href="https://starnewsmobile.com/" target="_blank">StarNews Mobile | The Leading Media Platform in Africa</a></h3>
+          <div class="role">Software Engineer – Business Analysis</div>
+          <div class="date">June 2023 – Present</div>
+          <div class="location">Remote</div>
+          <ul>
+            <li>Served as the primary Engineer for the Cameroon and Ivory Coast divisions remotely, leading initiatives to improve content performance and optimize regional revenue streams.</li>
+            <li>Implemented AWS Cloud solutions (Amazon Q, Amazon QuickSight) to enhance data visualization and automate reporting, improving decision-making at the executive level.</li>
+            <li>Optimized revenue by 65% through advanced SQL analysis and performance tracking.</li>
+            <li>Leveraged Google Ads and Google Cloud Platform logging to monitor and optimize digital campaigns, driving an 82% increase in user engagement and improving fault tolerance in marketing pipelines.</li>
+          </ul>
+        </article>
+
+        <article class="experience-card">
+          <h3>WeLocalize @ Apple inc.</h3>
+          <div class="role">French Sports Curator</div>
+          <div class="date">October 2025 – February 2026 | Remote | Contract</div>
+          <ul>
+            <li>Curated and published 200+ live sporting events weekly across U.S. and Canadian sports platforms, ensuring timely delivery and consistent user experience.</li>
+            <li>Reviewed and edited partner content to align with platform standards, contributing to 97% metadata accuracy and reducing publishing errors.</li>
+            <li>Conducted quality assurance checks on event metadata, layouts, and partner submissions, supporting high-reliability content delivery for thousands of daily users.</li>
+            <li>Managed large volumes of sports content using a CMS, maintaining on-time publication during high traffic live events and peak sports seasons.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="experience-card">
+        <h3>AI Video Recommender</h3>
+        <ul>
+          <li>Developed a cloud-native AI video recommendation engine for STM using OpenCLIP and Qdrant.</li>
+          <li>Performed frame-level vector similarity search with BLIP to generate automated marketing captions.</li>
+          <li>Improved personalization and increased campaign click-through rates by 60%.</li>
+        </ul>
+      </div>
+
+      <div class="experience-card" style="margin-top: 10px;">
+        <h3>Automated Data Reporting Tool</h3>
+        <ul>
+          <li>Engineered a Python-based script that connects to a production MySQL database hosted on AWS RDS.</li>
+          <li>Processed telecom billing data and calculated revenue metrics such as ARPPU and billed users.</li>
+          <li>Automated CSV report generation and email delivery through SMTP for internal reporting workflows.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="experience-card">
+        <h3>Core Skills</h3>
+        <ul>
+          <li><strong>Programming:</strong> Java, Python, SQL, JavaScript, C, C++, Dart</li>
+          <li><strong>Cloud & Data Tools:</strong> AWS, Amazon Q, QuickSight, Firebase, Tableau, Google Ads, Qdrant, Excel</li>
+          <li><strong>Frameworks & Development:</strong> React.js, Node.js, HTML, Linux</li>
+          <li><strong>Systems & DevOps:</strong> SaaS, IAM, TCP/IP, DNS, TLS, HTTP proxies</li>
+        </ul>
+      </div>
+
+      <div class="experience-card" style="margin-top: 10px;">
+        <h3>Education</h3>
+        <ul>
+          <li><strong>California State Polytechnic University</strong> — Bachelor of Science in Computer Science</li>
+          <li>Aug 2021 – May 2024 | Pomona, CA</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="experience-card">
+        <p><strong>Email:</strong> ysmaelkamgaing@gmail.com</p>
+        <p><strong>Phone:</strong> (310) 498-5954</p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ysmaelk" target="_blank">linkedin.com/in/ysmaelk</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/YsmaelK" target="_blank">github.com/YsmaelK</a></p>
+        <p><strong>Location:</strong> Los Angeles, CA</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Ysmael Kamgaing. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const time = now.toLocaleTimeString('en-US', { hour12: false });
+      document.getElementById('clock').textContent = time;
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
+</body>
+</html>
